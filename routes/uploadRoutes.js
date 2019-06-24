@@ -2,6 +2,8 @@ const AWS = require("aws-sdk");
 const keys = require("../config/keys");
 const uuid = require("uuid/v1");
 const requireLogin = require("../middlewares/requireLogin");
+
+AWS.config.region = "eu-west-3";
 const s3 = new AWS.S3({
   accessKeyId: keys.accessKeyId,
   secretAccessKey: keys.secretAccessKey
